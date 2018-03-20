@@ -886,105 +886,76 @@ header a:hover{
 
 /*Accordion-toggles*/
 
-/*accordion-section*/
-
 .about_us-main .accordion-toggles{
-    padding: 50px 0;
-    border-bottom: 1px solid #ebebeb;
+  padding: 50px 0;
 }
+
 .about_us-main .accordion-toggles .accordion-section{
-    padding-right: 20px;
+  padding-right: 20px;
 }
-.ui-accordion .ui-accordion-header{
-    margin-left: 39px;
-    position: relative;
-    height: 37px;
-    border-radius: 0;
-    background-color: #fff;
-    color: rgba(42,45,50,.5);
-    display: flex;
-    align-items: center;
-    font-size: 13px;
-    font-weight: 500;
-    outline: none;
-    border: none;
-    box-shadow: 0px 0 3px 0px #e8e8e8;
-    text-transform: uppercase;
-    margin-bottom: 4px;
-}
-.ui-accordion .ui-accordion-header span{
-    box-shadow: 0px 0 3px 0px #e8e8e8;
-}
-.ui-accordion .ui-icon{
-    position: absolute;
-    left: -40px;
-    display: inline-block;
-    height: 37px;
-    width: 37px;
-    top: 3px;
-    background-color: #f4b60d;
-}
-.ui-accordion .ui-accordion-content{
-    background-color: transparent;
-    border: none;
-    padding: 20px 5px 20px 40px;
-    line-height: 1.5;
-    font-size: 13px;
-}
-
-.ui-accordion .ui-state-active .ui-icon, .ui-button:active .ui-icon,
-.ui-accordion .ui-icon, .ui-widget-content .ui-icon{
-    background: #f4b60d;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.ui-accordion .ui-state-active .ui-icon, .ui-button:active .ui-icon{
-    background-image: url("../img/substract.png");
-}
-.ui-accordion .ui-icon, .ui-widget-content.ui-icon{
-    background-image: url("../img/add.png");
-    background-color: #fff;
-}
-.ui-accordion .ui-state-default.ui-state-hover .ui-icon{
-    background-image: url("../img/add.png");
-    background-color: #fff;
-}
-
-/*toggles-section*/
-
 .about_us-main .accordion-toggles .toggles-section{
-    padding-left: 20px;
+  padding-left: 20px;
 }
-.toggles-section-wrapper .faq{
-    margin-bottom: 4px;
+
+.about_us-main .accordion-toggles .accordion-section-text + div,
+.about_us-main .accordion-toggles .toggles-section-text + div{
+    margin-top: 10px;
 }
-.toggles-section-wrapper .faq h3{
+
+.about_us-main .accordion-toggles .title-accordion,
+.about_us-main .accordion-toggles .title-toggles{
     position: relative;
-    margin-left: 39px;
-    height: 37px;
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 13px;
     text-transform: uppercase;
     color: #2a2d32;
 }
-.toggles-section-wrapper .faq h3:hover{
-    color: #3598db;
+
+.about_us-main .accordion-toggles .title-accordion:hover h3,
+.about_us-main .accordion-toggles .title-toggles:hover h3{
+    color: #248cec;
 }
-.toggles-section-wrapper .faq .bg{
-    background-image: url(../img/add.png);
-    background-repeat: no-repeat;
+
+.about_us-main .accordion-toggles .title-accordion h3,
+.about_us-main .accordion-toggles .title-toggles h3{
+    margin-left: 39px;
+    height: 37px;
+    padding: 0 15px;
+    background-color: #fff;
+    box-shadow: 0 0 1px 1px #e8e8e8;
+    display: flex;
+    align-items: center;
+}
+
+.about_us-main .accordion-toggles .title-accordion span,
+.about_us-main .accordion-toggles .title-toggles span{
+    background: url('../img/add.png') no-repeat center;
+    background-color: #fff;
+    background-size: 40%;
+    box-shadow: 0 0 1px 1px #e8e8e8;
     position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
     height: 37px;
     width: 37px;
-    left: -39px;
-    top: 0px;
-    background-color: #fff;
-    background-position: center;
 }
-.toggles-section-wrapper .toggle-text{
-    padding: 20px 5px 20px 40px;
-    line-height: 1.5;
+
+.about_us-main .accordion-toggles .title-accordion span.close,
+.about_us-main .accordion-toggles .title-toggles span.close{
+    background: url('../img/minus.png') no-repeat center;
+    background-color: #f4b60d;
+    background-size: 40%;
+}
+
+.about_us-main .accordion-toggles .text-accordion,
+.about_us-main .accordion-toggles .text-toggles{
+    padding: 20px 5px 20px 39px;
+    background-color: transparent;
     font-size: 13px;
+    line-height: 1.5;
+    color: #8a8a8a;
 }
+
 /*ALL STALES END*/

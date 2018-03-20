@@ -46,34 +46,50 @@ $(document).ready( function() {
     });
 
     //Accordion
-    $( ".accordion-section-text" ).accordion({
-        heightStyle: "content"
+    $('.accordion-toggles .text-accordion').hide();
+    $('.accordion-toggles .title-accordion').click(function(){
+        let $text = $(this).next('.text-accordion');
+        let $span = $(this).children('span');
+
+        if ( $text.is(':hidden') ) {
+
+            $('.accordion-toggles .title-accordion').each(function(){
+                $(this).children('span').removeClass('close');
+                $(this).next('.text-accordion').slideUp();
+                $(this).css('color',"");
+            });
+
+            $(this).css('color',"#8a8a8a");
+            $text.slideDown();
+            $span.addClass('close');
+
+        } else {
+
+            $(this).css('color',"");
+            $text.slideUp();
+            $span.removeClass('close');
+
+        }
     });
 
     //Toggles
-    $('.toggle-text').hide();
-    $('.toggles-section-wrapper .faq h3').click(function () {
-        let toggle_text = $(this).next('.toggle-text');
-        let bg = $(this).children('.bg');
+    $('.accordion-toggles .text-toggles').hide();
+    $('.accordion-toggles .title-toggles').click(function(){
+        let $text = $(this).next('.text-toggles');
+        let $span = $(this).children('span');
 
-        if ( toggle_text.is(':hidden') ) {
-            $(this).css('margin-bottom', '0');
-            bg.css({
-                background: 'url("./img/substract.png")',
-                'background-position': '',
-                'background-repeat': '',
-                'background-color': '#f4b60d'
-            });
-            toggle_text.fadeIn().addClass('close');
+        if ( $text.is(':hidden') ) {
+
+            $(this).css('color',"#8a8a8a");
+            $text.slideDown();
+            $span.addClass('close');
+
         } else {
-            $(this).css('margin-bottom', '4px');
-            bg.css({
-                background: 'url("./img/add.png")',
-                'background-position': '',
-                'background-repeat': '',
-                'background-color': '#fff'
-            });
-            toggle_text.slideUp().removeClass('close');
+
+            $(this).css('color',"");
+            $text.slideUp();
+            $span.removeClass('close');
+
         }
     });
 
