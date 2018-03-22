@@ -93,6 +93,24 @@ $(document).ready( function() {
         }
     });
 
+    // tabs
+    $('.tab-list li').on('click', function (e) {
+      e.preventDefault();
+
+      let $target = $(this).children('a').attr('data-target');
+      let $targetElement = $( $target );
+
+      //Delete all class active
+      $('.tab-list li').removeClass('active');
+      $('.tab-item').removeClass('active');
+
+      //Add class active to this object
+      $targetElement.addClass('active');
+      $(this).addClass('active');
+
+    });
+
+
 });
 
 /*

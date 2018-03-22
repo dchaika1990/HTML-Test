@@ -958,4 +958,60 @@ header a:hover{
     color: #8a8a8a;
 }
 
+/* Tabs */
+.about_us-main .tabs-section .tab-list{
+    display: flex;
+    margin-bottom: 7px;
+}
+.about_us-main .tabs-section li{
+    padding: 15px 40px;
+    background-color: #fff;
+    box-shadow: 0 0 1px 1px #e8e8e8;
+    color: #2a2d32;
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+.about_us-main .tabs-section li.active{
+    background-color: #f4b60d;
+    color: #fff;
+}
+.about_us-main .tabs-section li + li {
+    margin-left: 7px;
+}
+.about_us-main .tabs-section .tab-item{
+    display: none;
+    padding: 35px;
+    background-color: #fff;
+    box-shadow: 0 0 1px 1px #e8e8e8;
+}
+.about_us-main .tabs-section .tab-content-title{
+    display: flex;
+    align-items: center;
+}
+.about_us-main .tabs-section .tab-content-title i{
+    color: #f4b60d;
+    font-size: 35px;
+}
+.about_us-main .tabs-section .tab-content-text{
+    padding-top: 20px;
+    font-size: 13px;
+    color: #8a8a8a;
+    line-height: 1.5;
+}
+.about_us-main .tabs-section .tab-content-title span{
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #2a2d32;
+  padding-left: 20px;
+}
+.about_us-main .tabs-section .tab-item.active{
+    display: block;
+}
+
+
+
+
+
 /*ALL STALES END*/
