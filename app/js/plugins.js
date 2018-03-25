@@ -94,20 +94,46 @@ $(document).ready( function() {
     });
 
     // tabs
-    $('.tab-list li').on('click', function (e) {
-      e.preventDefault();
+    $('.tabs-section .tab-list li a').on('click', function (e) {
+        e.preventDefault();
 
-      let $target = $(this).children('a').attr('data-target');
-      let $targetElement = $( $target );
+        let $target = $(this).attr('data-target');
+        let $targetElement = $( `.tabs-section ${$target}` );
 
-      //Delete all class active
-      $('.tab-list li').removeClass('active');
-      $('.tab-item').removeClass('active');
+        //Delete all class active
+        $('.tabs-section .tab-list li').removeClass('active');
+        $('.tabs-section .tab-item').removeClass('active');
 
-      //Add class active to this object
-      $targetElement.addClass('active');
-      $(this).addClass('active');
+        //Add class active to this object
+        $targetElement.addClass('active');
+        $(this).parent().addClass('active');
 
+    });
+
+    //tour
+    $('.tour-section .tab-list li a').on('click', function (e) {
+        e.preventDefault();
+
+        let $target = $(this).attr('data-target');
+        let $targetElement = $( `.tour-section ${$target}` );
+
+        //Delete all class active
+        $('.tour-section .tab-list li').removeClass('active');
+        $('.tour-section .tab-item').removeClass('active');
+
+        //Add class active to this object
+        $targetElement.addClass('active');
+        $(this).parent().addClass('active');
+
+    });
+
+    //Last-projecst-carousel
+    $('.projects-carousel').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        infinite: true,
     });
 
 
@@ -3117,3 +3143,5 @@ $(document).ready( function() {
     };
 
 }));
+
+
