@@ -1,5 +1,16 @@
 $(document).ready( function() {
 
+    //Header
+    $('.mobil-btn').click(function(e){
+        e.stopPropagation();
+        $('.mobile-nav').stop().slideToggle();
+        $(this).toggleClass('active');
+    })
+    $('body').click(function(){
+        $('.mobile-nav').slideUp();
+        $('.mobil-btn').removeClass('active');
+    })
+
     //Carousel
     $('.carousel').slick({
         dots: true,
@@ -20,7 +31,34 @@ $(document).ready( function() {
         autoplaySpeed: 2000,
         infinite: true,
         centerMode: true,
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 599,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 479,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
+
 
     //Brands-carousel
     $('.brands-carousel').slick({
@@ -29,6 +67,26 @@ $(document).ready( function() {
         autoplay: true,
         autoplaySpeed: 2000,
         infinite: true,
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 479,
+                settings: {
+                    slidesToShow: 2
+                }
+            }
+        ]
     });
 
 
